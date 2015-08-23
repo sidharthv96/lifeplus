@@ -1,0 +1,84 @@
+        <!DOCTYPE HTML>
+<html>
+<head>
+	<title>Life Plus</title>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <style type="text/css">
+    
+   .alert{ transition: opacity .3s ease-in;
+       background: #000;
+    opacity: 0;
+    position: fixed;
+    top: 14%;
+    left: 21%;
+       color: aliceblue;
+    text-align: center;
+    width: 62%;
+    padding: 2px;
+    height: auto;
+    line-height: 5%;
+    z-index: 1003;
+    border-radius: 8px;align-content: center;
+       box-shadow: 0 7px 8px 0 rgba(1, 3, 0, 0.26),0 0 2px 0 rgba(0, 0, 0, 0.38);}
+    </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+   
+     <div id="vm_alert_bar" class="alert" >
+        
+    </div>
+    
+    <!--
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+     -->
+    <script src="js/main.js"></script>
+   
+    <div style="margin:5%;box-shadow: rgba(0, 0, 0, 0.137255) 1px 6px 30px 1px, rgba(0, 0, 0, 0.480392) 0px 0px 14px 1px;" class="panel">
+        <div align="center"  class="panel-heading"><span><font size="35"><img style="top:-6px;position:relative"src="logo.png" width="50"/>&nbsp;Life Plus</font></span></div>
+        
+        <div align="center"id="panel_body" class="panel-body">
+            <div class="table-responsive">
+                <table  class="table">
+                    <thead>
+                        <tr>
+                           <th>
+                               Sl. No
+                           </th>
+                            <th>
+                                Type Of Incident
+                            </th>
+                            <th>
+                                Informer
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                                    Address Of Location
+                                </th>
+                                <th>
+                                    Exact Location
+                                </th>
+                        </tr>
+                    </thead>
+                    <tbody id="maintable">
+                        
+                    </tbody>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+    
+</html>
