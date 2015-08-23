@@ -28,7 +28,8 @@
         android:textSize="65dp"
         android:textColor="#fff"
         android:text="0.0 m/s"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:textAlignment="center" />
 
     <com.getbase.floatingactionbutton.AddFloatingActionButton
         android:id="@+id/semi_transparent"

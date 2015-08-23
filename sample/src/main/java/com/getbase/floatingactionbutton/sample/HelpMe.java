@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Vibrator;
 import android.provider.MediaStore;
 import android.util.AttributeSet;
 import android.util.Base64;
@@ -73,8 +74,13 @@ public class HelpMe extends Activity {
     public void alertother(View v){
         if(lastKnown!=null) {
             Location location = lastKnown;
-            String type="",status="",repid="",severity="";
+            String type="",status="Unattended",repid=MainActivity.ID,severity="";
             MainActivity.dataQ.put(MainActivity.dataQ.size() + 1, new DataPacket(String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()), new Date().toString(), String.valueOf(new Date().getTime()), String.valueOf(location.getSpeed()),BitMapToString(b_image),type,status,repid,severity));
+            Vibrator vi = (Vibrator) this.context.getSystemService(Context.VIBRATOR_SERVICE);
+            // Vibrate for 500 milliseconds
+            Toast.makeText(this, "Help will be here soon...", Toast.LENGTH_LONG)
+                    .show();
+            vi.vibrate(5000);
         }
     }
 
@@ -89,7 +95,7 @@ public class HelpMe extends Activity {
         provider = locationManager.getBestProvider(criteria, false);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        img = (ImageView) findViewById(R.id.imageView);
+        img = (ImageView) findViewById(R.id.imageViewcam);
         if(img!=null)
         img.setImageResource(R.drawable.camera);
 
@@ -104,15 +110,15 @@ public class HelpMe extends Activity {
             @Override
             public void onClick(View v) {
                 // capture picture
-                Toast.makeText(getApplicationContext(),"This feature is under construction",Toast.LENGTH_SHORT).show();
-                //captureImage();
+               // Toast.makeText(getApplicationContext(),"This feature is under construction",Toast.LENGTH_SHORT).show();
+                captureImage();
             }
         });
         alert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                alert(null);
+                alertother(null);
 
             }
         });
@@ -290,7 +296,7 @@ public class HelpMe extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(getApplicationContext(),"Welcome Back",Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(getApplicationContext(),"Welcome Back",Toast.LENGTH_SHORT).show();
 
         locationManager.requestLocationUpdates(provider, 1000, 1, new LocationListener() {
             @Override
