@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/sidharthvinod/AndroidStudioProjects/Life_plus/sample/build/intermediates/exploded-aar/Life_plus/library/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b02bdcc8f142b61dc4a68b8a5f744864fd0e3877">
+        <dex dex="/Users/sidharthvinod/AndroidStudioProjects/Life_plus/sample/build/intermediates/pre-dexed/debug/classes-541fbd8b4962f726bc822da2a9a48a362dc67593.jar" />
+    </item>
+    <item
+        jar="/Users/sidharthvinod/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/sidharthvinod/AndroidStudioProjects/Life_plus/sample/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-df169e663ca6b7be67cd0b2ae33a062677fe4d96.jar" />
+    </item>
+
+</items>
